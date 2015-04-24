@@ -2,7 +2,7 @@ This is a simple spring-session demo project
 
 1. download sources of example:
 
-    ```$ svn export https://github.com/daggerok/projects/trunk/spring-session-demo spring-session-demo```
+    ```$ git clone https://github.com/daggerok/spring-session-demo.git```
 
 2. install and run redis-server:
 
