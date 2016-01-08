@@ -5,9 +5,10 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Configuration
- * 
+ *
  * @author mak
  */
 @Configuration
 @ComponentScan(basePackages = {"demo"})
-public class Config {}
+public class Config {
+}

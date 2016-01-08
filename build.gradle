@@ -1,31 +1,30 @@
 buildscript {
-    ext {
-        springBootVersion = "1.2.2.RELEASE"
-    }
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
+    repositories { mavenCentral() }
+    dependencies { classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE' }
 }
 
-apply plugin: "java"
-apply plugin: "spring-boot"
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
 
-repositories {
-    jcenter()
+jar {
+    baseName = 'spring-session'
+    version = '0.0.1'
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { mavenCentral() }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-redis")
-    compile("org.springframework.session:spring-session-data-redis:1.0.0.RELEASE")
+    compile 'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-redis',
+            'org.springframework.session:spring-session-data-redis:1.0.0.RELEASE'
 
-    testCompile("org.springframework.boot:spring-boot-starter-test") 
-    testCompile("org.springframework:spring-test") 
+    testCompile 'org.springframework.boot:spring-boot-starter-test',
+            'org.springframework:spring-test'
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = "2.3"
-}
+task wrapper(type: Wrapper) { gradleVersion = 3.2 }
