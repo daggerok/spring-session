@@ -1,6 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
+services:
+  - redis-server
 notifications:
   on_failure: change # always|never
   on_success: change
