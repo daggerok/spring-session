@@ -1,4 +1,5 @@
-This is a simple spring-session demo project
+simple spring-session demo project [![build](https://travis-ci.org/daggerok/spring-session-demo.svg?branch=master)](https://travis-ci.org/daggerok/spring-session-demo)
+==================================
 
 1. download sources of example:
 
