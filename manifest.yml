@@ -1,0 +1,20 @@
+---
+# cf dev start
+# cf login -a https://api.local.pcfdev.io --skip-ssl-validation -u user -p pass
+# cf create-service p-redis shared-vm cf-redis-session-storage
+# gradle build
+# cf push
+# cf apps
+# open cf-spring-session.local.pcfdev.io # user:pwd
+# cf scale -i 4 cf-spring-session
+# open cf-spring-session.local.pcfdev.io/env # refresh few times
+# cf scale -i 1 cf-spring-session
+# cf dev stop
+services:
+- cf-redis-session-storage
+applications:
+- name: cf-spring-session
+  memory: 256M
+  diskquota: 56M
+  instances: 2
+  path: ./build/libs/spring-session-0.0.1.jar
