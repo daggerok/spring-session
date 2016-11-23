@@ -9,11 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author mak
  */
 @SpringBootApplication
-public class DemoApplication {
+public class SpringSessionApplication {
     /**
      * Run and go to http://localhost:8080/session/get
      */
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(SpringSessionApplication.class, args);
     }
 }
