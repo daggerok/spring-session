@@ -16,7 +16,7 @@ import static java.util.Objects.nonNull;
 public class SessionResource {
 
     @ResponseBody
-    @RequestMapping({"", "/", "/session/get"})
+    @RequestMapping({"", "/", "/session/get", "/login"})
     public String getSession(HttpSession httpSession) {
 
         val uid = (UUID) httpSession.getAttribute("uid");
