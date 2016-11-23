@@ -20,11 +20,10 @@ repositories { mavenCentral() }
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web',
-            'org.springframework.boot:spring-boot-starter-redis',
-            'org.springframework.session:spring-session-data-redis:1.0.0.RELEASE'
-
-    testCompile 'org.springframework.boot:spring-boot-starter-test',
-            'org.springframework:spring-test'
+            'org.springframework.boot:spring-boot-starter-data-redis',
+            'org.springframework.session:spring-session-data-redis',
+            'org.springframework.boot:spring-boot-devtools',
+            'org.projectlombok:lombok'
 }
 
 task wrapper(type: Wrapper) { gradleVersion = 3.2 }
